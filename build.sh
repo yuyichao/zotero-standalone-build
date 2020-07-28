@@ -174,6 +174,10 @@ mv components-fx components
 # defaults
 cp "$CALLDIR/assets/prefs.js" defaults-fx/preferences/zotero.js
 cat defaults/preferences/zotero.js >> defaults-fx/preferences/zotero.js
+
+grep -v telemetry defaults-fx/preferences/firefox.js > defaults-fx/preferences/firefox.js.tmp
+mv defaults-fx/preferences/firefox.js.tmp defaults-fx/preferences/firefox.js
+
 rm defaults/preferences/zotero.js
 rmdir defaults/preferences
 rmdir defaults
