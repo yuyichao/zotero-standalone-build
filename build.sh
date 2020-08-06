@@ -308,7 +308,7 @@ if [ $BUILD_MAC == 1 ]; then
 	cp "$CALLDIR/mac/zotero" "$CONTENTSDIR/MacOS/zotero"
 
 	# TEMP: Modified versions of some Firefox components for Big Sur, placed in xulrunner/MacOS
-	cp "$MAC_RUNTIME_PATH/../MacOS/"{libnss3.dylib,XUL} "$CONTENTSDIR/MacOS/"
+	#cp "$MAC_RUNTIME_PATH/../MacOS/"{libnss3.dylib,XUL} "$CONTENTSDIR/MacOS/"
 
 	# Use our own updater, because Mozilla's requires updates signed by Mozilla
 	cd "$CONTENTSDIR/MacOS"
