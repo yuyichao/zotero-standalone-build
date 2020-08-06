@@ -225,6 +225,12 @@ rm -rf "$app_dir"/chrome/browser/content/branding/*
 cp -R "$CALLDIR"/assets/branding/content/* "$app_dir/chrome/browser/content/branding/"
 cp "$CALLDIR/assets/branding/locale/brand.ftl" "$app_dir/localization/en-US/branding/brand.ftl"
 
+# Copy localization .ftl files
+for locale in `ls $app_dir/chrome/locale/`; do
+	mkdir -p "$app_dir/localization/$locale/zotero"
+	cp $app_dir/chrome/locale/$locale/zotero/mozilla/*.ftl "$app_dir/localization/$locale/zotero/"
+done
+
 # Add to chrome manifest
 echo "" >> "$app_dir/chrome.manifest"
 cat "$CALLDIR/assets/chrome.manifest" >> "$app_dir/chrome.manifest"
