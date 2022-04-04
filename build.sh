@@ -659,7 +659,7 @@ fi
 
 # Linux
 if [ $BUILD_LINUX == 1 ]; then
-	for arch in "i686" "x86_64"; do
+	for arch in "i686" "x86_64" "aarch64"; do
 		RUNTIME_PATH=`eval echo '$LINUX_'$arch'_RUNTIME_PATH'`
 		
 		# Set up directory

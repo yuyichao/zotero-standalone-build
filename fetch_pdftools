@@ -32,4 +32,7 @@ curl -o pdftools.tar.gz $PDF_TOOLS_URL
 tar -zxvf pdftools.tar.gz
 rm pdftools.tar.gz
 
+ln -sf /usr/bin/pdfinfo pdfinfo-linux-aarch64
+ln -sf /usr/bin/pdftotext pdftotext-linux-aarch64
+
 echo Done
