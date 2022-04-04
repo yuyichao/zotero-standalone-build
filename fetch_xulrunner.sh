@@ -266,6 +266,7 @@ if [ $BUILD_LINUX == 1 ]; then
 	cd ../firefox-aarch64
 	mv firefox-esr firefox
 	rm firefox.sh
+	rm -rf distribution
 	modify_omni linux64
 	extract_devtools
 	cd ..
